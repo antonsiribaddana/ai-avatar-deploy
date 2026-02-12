@@ -1,0 +1,61 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id           Int       @id @default(autoincrement())
+  name         String
+  email        String    @unique
+  passwordHash String
+  role         String    @default("kid")  // kid, teen, professional
+  isActive     Boolean   @default(true)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  // Relations
+  profile      Profile?
+  sessions     Session[]
+  achievements Achievement?
+}
+
+model Profile {
+  id              Int      @id @default(autoincrement())
+  userId          Int      @unique
+  age             Int?
+  country         String?
+  nativeLanguage  String?
+  avatarStyle     String   @default("default")
+  difficultyLevel Int      @default(1)
+  createdAt       DateTime @default(now())
+
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Session {
+  id         Int      @id @default(autoincrement())
+  userId     Int
+  mode       String   // presentation, interview, free_chat
+  startedAt  DateTime @default(now())
+  endedAt    DateTime?
+  completed  Boolean  @default(false)
+  finalScore Float?
+
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Achievement {
+  id                 Int      @id @default(autoincrement())
+  userId             Int      @unique
+  totalXp            Int      @default(0)
+  currentLevel       Int      @default(1)
+  currentStreakDays  Int      @default(0)
+  totalSessions      Int      @default(0)
+  averageScore       Float?
+  createdAt          DateTime @default(now())
+
+  user               User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}

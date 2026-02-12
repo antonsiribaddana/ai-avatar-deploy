@@ -1,0 +1,173 @@
+.kids-dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+}
+
+.kids-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.kids-welcome h1 {
+  font-size: 42px;
+  color: white;
+  margin: 0 0 8px 0;
+  font-weight: 800;
+}
+
+.kids-welcome p {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.kids-logout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.kids-logout:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.kids-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+}
+
+.kids-stat-card {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.kids-stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-info {
+  flex: 1;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 800;
+  color: #2d3748;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #718096;
+  font-weight: 500;
+}
+
+.kids-modes-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.kids-modes-section h2 {
+  font-size: 32px;
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 800;
+}
+
+.kids-modes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.kids-mode-card {
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 4px solid transparent;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.kids-mode-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.mode-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: transform 0.3s;
+}
+
+.kids-mode-card:hover .mode-icon {
+  transform: rotate(5deg) scale(1.1);
+}
+
+.kids-mode-card h3 {
+  font-size: 24px;
+  color: #2d3748;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+}
+
+.kids-mode-card p {
+  font-size: 16px;
+  color: #718096;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .kids-header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .kids-welcome h1 {
+    font-size: 32px;
+  }
+
+  .kids-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .kids-modes {
+    grid-template-columns: 1fr;
+  }
+}

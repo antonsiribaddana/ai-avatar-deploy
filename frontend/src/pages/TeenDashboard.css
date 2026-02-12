@@ -1,0 +1,223 @@
+.teen-dashboard {
+  min-height: 100vh;
+  background: #0f0f1e;
+  color: white;
+}
+
+.teen-nav {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.teen-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+.teen-logout {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: white;
+}
+
+.teen-logout:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.teen-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+.teen-hero {
+  margin-bottom: 50px;
+}
+
+.teen-welcome h1 {
+  font-size: 48px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 12px 0;
+}
+
+.teen-welcome p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.teen-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.teen-stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.3s;
+}
+
+.teen-stat-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-4px);
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+}
+
+.teen-modes-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.teen-modes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.teen-mode-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.teen-mode-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.mode-gradient {
+  height: 120px;
+  width: 100%;
+}
+
+.mode-content {
+  padding: 24px;
+}
+
+.mode-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.teen-mode-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: white;
+}
+
+.teen-mode-card p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 20px 0;
+  line-height: 1.6;
+}
+
+.mode-start-btn {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.mode-start-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 768px) {
+  .teen-container {
+    padding: 40px 20px;
+  }
+
+  .teen-welcome h1 {
+    font-size: 36px;
+  }
+
+  .teen-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .teen-modes-grid {
+    grid-template-columns: 1fr;
+  }
+}

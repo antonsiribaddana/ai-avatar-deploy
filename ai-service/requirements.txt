@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+gTTS
+pydantic
+SpeechRecognition
+pydub
+python-multipart
+opencv-python
+mediapipe
+fer
+Pillow
